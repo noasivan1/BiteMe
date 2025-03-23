@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resturant.EmployeeController">
+   <children>
+      <Label fx:id="txtEmployeeName" layoutX="8.0" layoutY="13.0" text="Employee Name" />
+      <Button id="btnExit" fx:id="btnLogout" layoutX="22.0" layoutY="37.0" mnemonicParsing="false" onAction="#getBtnLogout" text="Logout" />
+      <Label layoutX="353.0" layoutY="41.0" text="Orders Window">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font></Label>
+      <Button id="btnExit" fx:id="btnOrderReceived" layoutX="590.0" layoutY="568.0" mnemonicParsing="false" onAction="#getBtnOrderReceived" text="Order Recieved" />
+      <Button id="btnExit" fx:id="btnOrderCompleted" layoutX="737.0" layoutY="568.0" mnemonicParsing="false" onAction="#getBtnOrderCompleted" text="Order Completed" />
+      <TableView fx:id="orderTable" layoutX="14.0" layoutY="123.0" prefHeight="400.0" prefWidth="946.0">
+            <columns>
+            <TableColumn fx:id="orderIdColumn" prefWidth="75.0" text="Order ID" />
+            <TableColumn fx:id="customerNumberColumn" prefWidth="130.0" text="Customer Number" />
+            <TableColumn fx:id="orderDateTimeColumn" prefWidth="135.0" text="Order Date/Time" />
+            <TableColumn fx:id="dishNameColumn" prefWidth="118.0" text="Dish Name" />
+            <TableColumn fx:id="quantityColumn" prefWidth="99.0" text="Quantity" />
+            <TableColumn fx:id="sizeColumn" prefWidth="99.0" text="Size" />
+            <TableColumn fx:id="specificationColumn" prefWidth="99.0" text="Specification" />
+            <TableColumn fx:id="IsDeliveryColumn" text="Delivery" />
+            <TableColumn fx:id="orderStatusColumn" prefWidth="106.0" text="Order Status" />
+         </columns>
+        </TableView>
+      <TextField fx:id="txtOrderID" layoutX="107.0" layoutY="568.0" onAction="#getTxtOrderID" prefHeight="25.0" prefWidth="78.0" />
+      <Label layoutX="39.0" layoutY="572.0" text="Order ID" />
+      <Button fx:id="btnBack" layoutX="26.0" layoutY="607.0" mnemonicParsing="false" onAction="#getBtnBack" text="Back" />
+      <TextField fx:id="txtTime" layoutX="353.0" layoutY="568.0" />
+      <Label layoutX="231.0" layoutY="572.0" text="delivery arrival time:" />
+      <Label fx:id="txtMsg" layoutX="534.0" layoutY="611.0" prefHeight="17.0" prefWidth="312.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
